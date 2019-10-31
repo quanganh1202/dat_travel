@@ -1,0 +1,26 @@
+{
+    "name": "dat-travel",
+    "version": "1.0.0",
+    "scripts": {
+        "autoprefixer": "postcss -u autoprefixer -r build/css/*.css",
+        "scss": "node-sass --output-style expanded --indent-width 4 -o build/css assets/scss",
+        "uglify": "uglifyjs assets/js/*.js -m -o build/js/script.js",
+        "serve": "browser-sync start --server --files \"production/css/*.css, production/js/*.js\"",
+        "build:css": "npm run scss && npm run autoprefixer",
+        "build:js": "npm run uglify",
+        "build:all": "npm run build:css && npm run build:js",
+        "watch:css": "onchange \"assets/scss\" -- npm run build:css",
+        "watch:js": "onchange \"assets/js\" -- npm run build:js",
+        "watch:all": "npm-run-all -p serve watch:css watch:js",
+        "start": "npm run build:all && npm run watch:all"
+    },
+    "devDependencies": {
+        "node-sass": "^4.5.0",
+        "postcss-cli": "^3.0.0-beta",
+        "autoprefixer": "^6.7.6",
+        "browser-sync": "^2.18.8",
+        "npm-run-all": "^4.0.2",
+        "onchange": "^3.2.1",
+        "uglify-js": "^2.8.3"
+    }
+}

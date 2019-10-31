@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Itinerario su misura</title>
+	<link rel="stylesheet" href="./build/css/styles.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./build/js/script.js"></script>
+    <script type="text/javascript">
+        checkPageScroll()
+    </script>
+</head>
+<body>
+	<div id="app">
+		<div id="background-video" style="min-height: calc(100vh - 200px)">
+            <div id="overlay-background"></div>
+			<div id="background-image" style="background-image: url('./assets/images/tours/aruba-contactheader.jpg'); height: calc(100vh - 200px)"></div>
+		</div>
+		<div id="header">
+			<div class="container-wrapper">
+				<div id="header-logo">LOGO</div>
+				<div id="header-menu">
+					<ul>
+						<li><span><a href="index.html">Home</a></span></li>
+						<li>
+							<span>Destinazioni</span>
+							<div class="child-menu image-menu">
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Vietnam</a></p>
+                                </div>
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Laos</a></p>
+                                </div>
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Cambogia</a></p>
+                                </div>
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Birmania</a></p>
+                                </div>
+							</div>
+						</li>
+						<li>
+							<span>Menu 2</span>
+							<div class="child-menu">
+                                <ul>
+                                    <li><span>Sub menu 3-1</span></li>
+                                    <li><span>Sub menu 3-2</span></li>
+                                </ul>
+							</div>
+						</li>
+						<li>
+							<span>Menu 3</span>
+							<div class="child-menu">
+								<ul>
+									<li><span>Sub menu 3-1</span></li>
+									<li><span>Sub menu 3-2</span></li>
+								</ul>
+							</div>
+						</li>
+						<li><span>Menu 4</span></li>
+						<li>
+							<button id="header-menu-btn" onclick="window.location.href = 'question.html';">Itinerario su misura</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="info-page-content question-content">
+			<div class="container-wrapper">
+                <div id="background-image-content">
+                    <h1 id="country-name">QUESTION US</h1>
+                </div>
+                <div id="info-section">
+                    <div id="question-form" class="section">
+                        <form onsubmit="alert('Questions sent successfully!')">
+                            <div class="form-input title">
+                                <div>
+                                    <label for="title">Title</label>
+                                </div>
+                                <input id="title" name="title" type="text" />
+                            </div>
+                            <div class="form-input name">
+                                <div>
+                                    <label for="name">Name</label>
+                                </div>
+                                <input id="name" name="name" type="text" />
+                            </div>
+                            <div class="form-input email full-length">
+                                <div>
+                                    <label for="email">Email</label>
+                                </div>
+                                <input id="email" name="email" type="email" />
+                            </div>
+                            <div class="form-input phone">
+                                <div>
+                                    <label for="phone">Phone</label>
+                                </div>
+                                <input id="phone" name="phone" type="text" />
+                            </div>
+                            <div class="form-input country">
+                                <div>
+                                    <label for="country">Country</label>
+                                </div>
+                                <select name="country">
+                                    <option value="vietnam">Vietnam</option>
+                                    <option value="laos">Laos</option>
+                                    <option value="cam">Cambogia</option>
+                                    <option value="audi">Birmania</option>
+                                </select>
+                            </div>
+                            <div class="form-input message full-length">
+                                <div>
+                                    <label for="message">Message</label>
+                                </div>
+                                <textarea rows="5" id="message" name="message"></textarea>
+                            </div>
+                            <button id="submit-btn" type="submit">SEND</button>
+                        </form>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container-wrapper">
+				<div class="footer-column">
+					<p class="footer-title">CONTACT</p>
+					<p>Phone: 0123456789</p>
+					<p>Email: abc@def.com</p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">COMPANY</p>
+					<p>About us</p>
+					<p>Blog</p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">TOURS</p>
+					<p>Tour Laos</p>
+					<p>Tour Vietnam</p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="footer-column" id="payment-column">
+					<p class="footer-title">PAYMENT</p>
+					<p>
+						<span>Visa/Master</span>
+						<img class="payment-icon" alt="visa master icon" src="./assets/images/mastercard-icon-png-9.jpg" />
+					</p>
+					<p>
+						<span>AMEX</span>
+						<img class="payment-icon" alt="amex icon" src="./assets/images/american_express-512.png" />
+					</p>
+					<p>
+						<span>JCB</span>
+						<img class="payment-icon" alt="jcb icon" src="./assets/images/jcb-512.png" />
+					</p>
+					<p>
+						<span>Paypal</span>
+						<img class="payment-icon" alt="paypal icon" src="./assets/images/paypal-icon-logo-png-transparent.png" />
+					</p>
+				</div>
+				<div class="footer-column">
+					<div id="footer-logo">LOGO</div>
+					<div id="social-link">
+						<a href="#"><img class="social-icon" alt="facebook icon" src="./assets/images/Facebook-icon-1.png" /></a>
+						<a href="#"><img class="social-icon" alt="youtube icon" src="./assets/images/youtube_PNG14.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact-panel">
+            <div id="quick-access-buttons">
+                <button id="button-question" class="quick-access-button" onclick="window.location.href = 'question.html';">
+                    <i class="far fa-question-circle"></i>
+                </button>
+                <button id="toggle-button-open" class="quick-access-button" onClick="openContactForm()">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="button-open-facebook" class="quick-access-button" onclick="window.open('https://www.facebook.com/roberto.baggio.108', '_blank');">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button id="button-open-youtube" class="quick-access-button" onclick="window.open('https://www.youtube.com/', '_blank');">
+                    <i class="fab fa-youtube"></i>
+                </button>
+            </div>
+			<button id="toggle-button-close" onClick="closeContactForm()">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+	</div>
+
+</body>
+</html>

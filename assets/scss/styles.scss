@@ -1,0 +1,568 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#app {
+    background: black;
+    font-family: Arial;
+    color: white;
+    /* background-image: url(https://amotravel.com/wp-content/uploads/2018/10/golden-bridge-banner-.jpg); */
+}
+
+.container-wrapper {
+    width: 1170px;
+    height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#background-video {
+    position: absolute;
+    right: 0;
+    top: 0;
+    min-width: 100vw; 
+    min-height: 100vh;
+    &.background-home {
+        height: 100vh;
+        overflow: hidden;
+    }
+    > #overlay-background {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    > #background-image {
+        width: 100%;
+        height: 100vh;
+        background-position: center center;
+    }
+}
+#background-video video {
+    width: 100%;
+}
+
+#header {
+    height: 82px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+#header #header-logo {
+    font-size: 30px;
+    line-height: 82px;
+    color: white;
+    font-weight: bold;
+    float: left;
+    padding: 0 50px;
+}
+#header #header-menu {
+    float: right;
+    color: black;
+    position: relative;
+    top: 22px;
+}
+#header #header-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+#header #header-menu > ul li {
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    color: white;
+}
+#header #header-menu > ul > li a {
+    text-decoration: none;
+    color: white;
+}
+#header #header-menu > ul > li:last-child {
+    padding-left: 0;
+    padding-right: 0;
+}
+#header #header-menu > ul li > #header-menu-btn {
+    background: green;
+    font-size: 16px;
+    height: 40px;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#header #header-menu > ul > li:hover {
+    color: green;
+    a {
+        color: green;
+    }
+}
+#header #header-menu > ul li:hover .child-menu {
+    display: flex;
+    color: black;
+}
+#header #header-menu > ul li > .child-menu {
+    position: absolute;
+    top: 38px;
+    left: 0;
+    background: white;
+    padding: 10px 10px 10px 0;
+    display: flex;
+    color: black;
+    z-index: 100;
+    display: none;
+}
+#header #header-menu > ul li > .child-menu > ul {
+    min-width: 150px;
+}
+#header #header-menu > ul li > .child-menu > ul li {
+    clear: both;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: black;
+    font-size: 14px;
+}
+#header #header-menu > ul li > .child-menu > ul li i {
+    font-size: 12px;
+    margin-left: 5px;
+    display: none;
+}
+#header #header-menu > ul li > .child-menu > ul li:hover {
+    color: green;
+}
+#header #header-menu > ul li > .child-menu > ul li:hover i {
+    display: inline-block;
+}
+#header #header-menu > ul li > .child-menu.image-menu {
+    padding: 10px;
+    left: -300px;
+}
+#header #header-menu > ul li > .child-menu.image-menu .item-image {
+    float: left;
+    padding: 5px;
+    text-align: center;
+}
+#header #header-menu > ul li > .child-menu.image-menu .item-image img {
+    width: 200px;
+}
+#header #header-menu > ul li > .child-menu.image-menu .item-image p {
+    margin: 5px 0 0;
+}
+#header #header-menu > ul li > .child-menu.image-menu .item-image p a {
+    text-decoration: none;
+    color: black;
+}
+#header #header-menu > ul li > .child-menu.image-menu .item-image:hover a {
+    color: green;
+}
+
+#footer {
+    height: 150px;
+    background: black;
+    position: relative;
+    z-index: 100;
+    float: left;
+    width: 100%;
+}
+#footer .footer-column {
+    float: left;
+    width: 20%;
+    padding: 10px 0 10px 20px;
+    box-sizing: border-box;
+}
+#footer .footer-column:last-child {
+    text-align: center;
+}
+#footer .footer-column .footer-title {
+    color: #868e96;
+    font-size: 12px;
+    margin: 5px 0 10px;
+}
+#footer .footer-column p {
+    color: #dee2e6;
+    font-size: 13px;
+    margin: 5px 0;
+}
+#footer .footer-column #footer-logo {
+    font-size: 25px;
+    margin-top: 30px;
+}
+#footer .footer-column #social-link {
+    padding: 20px 0 0;
+}
+#footer .footer-column #social-link .social-icon {
+    width: 30px;
+}
+#footer .footer-column#payment-column p {
+    display: flex;
+    align-items: center;
+}
+#footer .footer-column#payment-column .payment-icon {
+    height: 20px;
+    margin-left: 5px;
+}
+
+#content {
+    &.homepage {
+        height: calc(100vh - 150px - 82px);
+    }
+    margin-top: 82px;
+    float: left;
+    width: 100%;
+    &.info-page-content {
+        min-height: calc(100vh - 82px);
+        &.question-content {
+            min-height: calc(100vh - 82px - 200px);
+            #background-image-content {
+                height: calc(100vh - 82px - 200px);
+            }
+        }
+        #background-image-content {
+            height: calc(100vh - 82px);
+            text-align: center;
+            // padding-top: 20%;
+            box-sizing: border-box;
+            position: relative;
+            #country-name {
+                margin-top: 0;
+                font-size: 50px;
+                float: left;
+                width: 100%;
+                position: absolute;
+                top: 20%;
+            }
+            img {
+                position: absolute;
+                left: calc(50% - 25px);
+                bottom: 20px;
+                width: 50px;
+                animation-name: moving-arrow;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+            }
+            @-webkit-keyframes moving-arrow {
+                0% { bottom: 30px; }
+                50% { bottom: 50px; }
+                100% { bottom: 30px; }
+            }
+            
+            /* Standard syntax */
+            @keyframes moving-arrow {
+                0% { bottom: 30px; }
+                50% { bottom: 50px; }
+                100% { bottom: 30px; }
+            }
+        }
+        #info-section {
+            padding: 30px 20px;
+            background: white;
+            overflow: auto;
+            #description {
+                padding: 15px 0;
+                text-align: center;
+                &.with-border {
+                    border-bottom: 1px solid rgb(177, 177, 177);
+                    margin-bottom: 50px;
+                    padding-bottom: 50px;
+                }
+                #description-title {
+                    color: green;
+                    margin: 0 0 20px;
+                }
+                p {
+                    color: black;
+                    margin: 0;
+                }
+            }
+            #main-info {
+                overflow: auto;
+                > * {
+                    float: left;
+                }
+                #main-info-pictures {
+                    width: 40%;
+                    > img {
+                        width: 100%;
+                    }
+                }
+                #main-info-titles {
+                    width: 60%;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    .info-title {
+                        padding: 0 0 10px;
+                        &.show-detail .info-title-content {
+                            display: block;
+                        }
+                        .info-title-header {
+                            color: green;
+                            font-weight: bold;
+                            cursor: pointer;
+                            margin: 0;
+                            padding: 5px;
+                            border: 1px solid rgb(228, 222, 222);
+                            box-shadow: 1px 1px rgb(221, 219, 219);
+                        }
+                        .info-title-content {
+                            display: none;
+                            color: black;
+                            padding: 10px 0;
+                            overflow: auto;
+                            p {
+                                margin: 0;
+                                font-size: 14px;
+                                line-height: 20px;
+                            }
+                            .left {
+                                float: left;
+                            }
+                            .right {
+                                float: right;
+                            }
+                        }
+                    }
+                }
+            }
+            .section {
+                overflow: auto;
+                padding: 10px 0 30px;
+                border-bottom: 1px solid rgb(177, 177, 177);
+            }
+            #graphic-description {
+                > div {
+                    float: left;
+                    width: 50%;
+                    img.map-graphic {
+                        float: right;
+                        width: 30%;
+                        padding: 0 20px;
+                    }
+                    .info-description {
+                        color: black;
+                        width: 50%;
+                        margin: 0;
+                        padding: 10px 20px;
+                    }
+                }
+            }
+            #tours {
+                border: none;
+                padding-top: 30px;
+                .tour-selection {
+                    width: 25%;
+                    float: left;
+                    padding: 10px;
+                    box-sizing: border-box;
+                    .tour-selection-content {
+                        border: 1px solid rgb(228, 222, 222);
+                        box-shadow: 1px 1px rgb(221, 219, 219);
+                        box-sizing: border-box;
+                        &:hover {
+                            .tour-image {
+                                background-size: auto 110%;
+                            }
+                        }
+                        .tour-image {
+                            width: 100%;
+                            height: 200px;
+                            background-size: auto 100%;
+                            background-position: center center;
+                            transition: 0.3s;
+                        }
+                        .tour-info {
+                            color: black;
+                            padding: 0 10px;
+                            text-align: center;
+                            > * {
+                                margin: 0;
+                                font-size: 14px;
+                            }
+                            > h2 {
+                                color: green;
+                                padding: 15px 0 0;
+                                font-size: 18px;
+                                text-align: left;
+                            }
+                            > p {
+                                text-align: left;
+                                &:first-of-type {
+                                    margin-bottom: 10px;
+                                }
+                            }
+                            button {
+                                text-align: center;
+                                margin: 0 auto;
+                                background: green;
+                                color: white;
+                                padding: 10px 20px;
+                                margin: 15px 0 10px;
+                                border-radius: 5px;
+                                font-weight: bold;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            #question-form {
+                width: 100%;
+                float: left;
+                form {
+                    overflow: auto;
+                    width: 50%;
+                    margin: 0 auto;
+                    color: black;
+                    .form-input {
+                        width: 50%;
+                        float: left;
+                        padding: 10px;
+                        box-sizing: border-box;
+                        &.full-length {
+                            width: 100%;
+                        }
+                        input, select {
+                            width: 100%;
+                            height: 40px;
+                            box-sizing: border-box;
+                            padding: 0 10px;
+                            font-size: 14px;
+                        }
+                        textarea {
+                            width: 100%;
+                            font-size: 14px;
+                            padding: 10px;
+                            box-sizing: border-box;
+                        }
+                        > div {
+                            padding: 5px 0 10px;
+                            color: green;
+                        }
+                    }
+                    #submit-btn {
+                        background: green;
+                        color: white;
+                        padding: 8px 30px;
+                        cursor: pointer;
+                        float: right;
+                        margin-right: 10px;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+#side-bar {
+    width: 250px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    text-align: center;
+}
+#side-bar #side-bar-list {
+    list-style: none;
+    padding: 0;
+}
+#side-bar #side-bar-list li {
+    padding: 5px 10px;
+    font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+    border-bottom: 1px solid transparent;
+    text-align: center;
+}
+#side-bar #side-bar-list li > .child-menu {
+    display: none;
+    position: absolute;
+    right: -150px;
+    top: 0;
+    width: 150px;
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+#side-bar #side-bar-list li > .child-menu ul {
+    padding: 0;
+    list-style: none;
+}
+#side-bar #side-bar-list li > .child-menu ul li {
+    padding: 5px 10px;
+    font-size: 14px;
+}
+#side-bar #side-bar-list li > .child-menu ul li a {
+    text-decoration: none;
+    color: black;
+}
+#side-bar #side-bar-list li > .child-menu ul li i {
+    font-size: 12px;
+    margin-left: 5px;
+}
+#side-bar #side-bar-list li > .child-menu ul li:hover a {
+    color: green;
+}
+#side-bar #side-bar-list > li:hover {
+    border-bottom: 1px solid white;
+    cursor: pointer;
+}
+#side-bar #side-bar-list li:hover .child-menu {
+    display: block;
+}
+#side-bar #request-btn {
+    background: green;
+    height: 40px;
+    width: 150px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 auto;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#contact-panel {
+    position: fixed;
+    width: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    transition: 0.3s;
+    z-index: 200;
+    #quick-access-buttons {
+        position: absolute;
+        left: -40px;
+        top: 150px;
+    }
+}
+#contact-panel .quick-access-button {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    background: rgb(64, 64, 64);
+    border: none;
+    cursor: pointer;
+    color: white;
+    outline: none;
+    font-size: 16px;
+    margin-bottom: 5px;
+    &:hover {
+        background: green;
+    }
+}
+#contact-panel #toggle-button-close {
+    position: absolute;
+    font-size: 30px;
+    cursor: pointer;
+    outline: none;
+    top: 10px;
+    left: 10px;
+    border: none;
+    background: none;
+}
