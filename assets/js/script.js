@@ -8,8 +8,9 @@ function closeContactForm() {
 
 function onScrollPage(event) {
     const contentElement = document.querySelector('html');
+    const bodyElement = document.querySelector('body');
     const headerElement = document.querySelector('#header');
-    if (headerElement && contentElement.scrollTop > 0) {
+    if (headerElement && (contentElement.scrollTop > 0 || bodyElement.scrollTop > 0)) {
         headerElement.style.background = "rgba(0, 0, 0, 0.5)";
     } else {
         headerElement.style.background = "transparent";
