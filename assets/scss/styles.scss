@@ -10,6 +10,10 @@ body {
     /* background-image: url(https://amotravel.com/wp-content/uploads/2018/10/golden-bridge-banner-.jpg); */
 }
 
+.bold {
+    font-weight: bold;
+}
+
 .container-wrapper {
     width: 1170px;
     height: 100%;
@@ -230,11 +234,20 @@ body {
             position: relative;
             #country-name {
                 margin-top: 0;
-                font-size: 50px;
                 float: left;
                 width: 100%;
                 position: absolute;
                 top: 20%;
+                > h1 {
+                    font-size: 50px;
+                    margin-bottom: 5px;
+                }
+                > h2 {
+                    margin-top: 0;
+                    font-size: 24px;
+                    font-weight: normal;
+                    color: white;
+                }
             }
             img {
                 position: absolute;
@@ -334,19 +347,50 @@ body {
                 border-bottom: 1px solid rgb(177, 177, 177);
             }
             #graphic-description {
-                > div {
-                    float: left;
-                    width: 50%;
-                    img.map-graphic {
-                        float: right;
-                        width: 30%;
-                        padding: 0 20px;
+                display: flex;
+                justify-content: center;
+                align-items: flex-start;
+                .map-graphic {
+                    width: 15%;
+                    padding: 0 20px;
+                }
+                svg {
+                    align-self: stretch;
+                    padding: 0 20px;
+                    min-height: 350px;
+                    .location-mark {
+                        display: none;
                     }
-                    .info-description {
-                        color: black;
-                        width: 50%;
-                        margin: 0;
-                        padding: 10px 20px;
+                }
+                .info-description {
+                    color: black;
+                    width: 25%;
+                    margin: 0;
+                    padding: 10px 20px;
+                }
+                #country-areas {
+                    color: #111111;
+                    font-size: 14px;
+                    .country-area {
+                        overflow: auto;
+                        width: 100%;
+                        .area-name {
+                            float: left;
+                            width: 20%;
+                            color: green;
+                            text-decoration: underline;
+                            font-weight: bold;
+                        }
+                        .area-locations {
+                            width: 80%;
+                            float: left;
+                            .area-location {
+                                &:hover {
+                                    color: green;
+                                    cursor: pointer;
+                                }
+                            }
+                        }
                     }
                 }
             }
@@ -454,6 +498,108 @@ body {
                     }
                 }
             }
+            #country-news-header {
+                width: 100%;
+                color: green;
+            }    
+            #country-news {
+                border-bottom: none;
+                .country-news-wrapper {
+                    width: 100%;
+                    color: black;
+                    overflow: auto;
+                    padding: 0 0 40px;
+                    .country-news-image {
+                        width: 30%;
+                        float: left;
+                        height: 190px;
+                        border: 1px solid rgb(177, 177, 177);
+                        box-sizing: border-box;
+                        background-size: 100% auto;
+                        background-position: center center;
+                        background-repeat: no-repeat;
+                        cursor: pointer;
+                    }
+                    .country-news-description {
+                        width: 70%;
+                        float: left;
+                        padding: 0 20px;
+                        box-sizing: border-box;
+                        .news-title {
+                            margin-top: 0;
+                            a {
+                                color: green;
+                            }
+                        }
+                        .news-description {
+                            font-size: 15px;
+                            line-height: 20px;
+                            .detail-button {
+                                color: green;
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+            #location-post-wrapper {
+                border-bottom: none;
+                color: black;
+                &:after {
+                    clear: both;
+                }
+                #location-post {
+                    float: left;
+                    width: 70%;
+                    p {
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+                }
+                #quick-access-menu {
+                    float: left;
+                    width: 30%;
+                    padding: 0 20px;
+                    box-sizing: border-box;
+                    > ul {
+                        border: 1px solid #ccc;
+                        padding-top: 10px;
+                        padding-bottom: 10px;
+                        padding-right: 20px;
+                        > li {
+                            border-bottom: none;
+                            &:last-child {
+                                border-bottom: none;
+                            }
+                            > p {
+                                margin: 0;
+                                border-bottom: 1px solid green;
+                                color: green;
+                                padding: 10px;
+                            }
+                            > ul {
+                                > li {
+                                    padding: 10px;
+                                    cursor: pointer;
+                                    &:hover {
+                                        border-bottom: 1px solid green;
+                                        color: green;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    ul {
+                        list-style: none;
+                        padding-left: 20px;
+                        font-size: 15px;
+                    }
+                    li {
+                        border-bottom: 1px solid #ccc;
+                    }
+                }
+            }
         }
     }
 }
@@ -538,31 +684,32 @@ body {
         position: absolute;
         left: -40px;
         top: 150px;
+        width: 40px;
+        .quick-access-button {
+            width: 40px;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            background: rgb(64, 64, 64);
+            border: none;
+            cursor: pointer;
+            color: white;
+            outline: none;
+            font-size: 16px;
+            margin-bottom: 5px;
+            &:hover {
+                background: green;
+            }
+        }
     }
-}
-#contact-panel .quick-access-button {
-    width: 40px;
-    height: 40px;
-    text-align: center;
-    line-height: 40px;
-    background: rgb(64, 64, 64);
-    border: none;
-    cursor: pointer;
-    color: white;
-    outline: none;
-    font-size: 16px;
-    margin-bottom: 5px;
-    &:hover {
-        background: green;
+    #toggle-button-close {
+        position: absolute;
+        font-size: 30px;
+        cursor: pointer;
+        outline: none;
+        top: 10px;
+        left: 10px;
+        border: none;
+        background: none;
     }
-}
-#contact-panel #toggle-button-close {
-    position: absolute;
-    font-size: 30px;
-    cursor: pointer;
-    outline: none;
-    top: 10px;
-    left: 10px;
-    border: none;
-    background: none;
 }

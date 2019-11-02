@@ -1,9 +1,11 @@
 function openContactForm() {
     document.getElementById("contact-panel").style.width = "300px";
+    document.getElementById("toggle-button-open").style.background = "green";
 }
 
 function closeContactForm() {
     document.getElementById("contact-panel").style.width = "0px";
+    document.getElementById("toggle-button-open").style.background = "#404040";
 }
 
 function onScrollPage(event) {
@@ -30,5 +32,13 @@ function onClickTitle(element) {
         })
         element.parentElement.focus();
         element.parentElement.classList.add('show-detail');
+    }
+}
+
+function showLocationMark(locationMarkId, isShowLocationMark) {
+    const mark = document.querySelector('.mark-' + locationMarkId);
+    if (mark) {
+        if (isShowLocationMark) mark.style.display = 'inline';
+        else mark.style.display = 'none';
     }
 }

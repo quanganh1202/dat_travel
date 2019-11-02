@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Luoghi turistici</title>
+	<link rel="stylesheet" href="./build/css/styles.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./build/js/script.js"></script>
+    <script type="text/javascript">
+        checkPageScroll()
+    </script>
+</head>
+<body>
+	<div id="app">
+		<div id="background-video">
+            <div id="overlay-background"></div>
+			<div id="background-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg');"></div>
+		</div>
+		<div id="header">
+			<div class="container-wrapper">
+				<div id="header-logo">LOGO</div>
+				<div id="header-menu">
+					<ul>
+						<li><span><a href="index.html">Home</a></span></li>
+						<li>
+							<span>Destinazioni</span>
+							<div class="child-menu image-menu">
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Vietnam</a></p>
+                                </div>
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Laos</a></p>
+                                </div>
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Cambogia</a></p>
+                                </div>
+                                <div class="item-image" onclick="window.location.href = 'destination.html';">
+                                    <a href="#"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                    <p><a href="#">Birmania</a></p>
+                                </div>
+							</div>
+						</li>
+						<li>
+							<span>Menu 2</span>
+							<div class="child-menu">
+                                <ul>
+                                    <li><span>Sub menu 3-1</span></li>
+                                    <li><span>Sub menu 3-2</span></li>
+                                </ul>
+							</div>
+						</li>
+						<li>
+							<span>Menu 3</span>
+							<div class="child-menu">
+								<ul>
+									<li><span>Sub menu 3-1</span></li>
+									<li><span>Sub menu 3-2</span></li>
+								</ul>
+							</div>
+						</li>
+						<li><span>Menu 4</span></li>
+						<li>
+							<button id="header-menu-btn" onclick="window.location.href = 'question.html';">Itinerario su misura</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="info-page-content">
+			<div class="container-wrapper">
+                <div id="background-image-content">
+                    <h1 id="country-name">Vietnam</h1>
+                    <img src="assets/images/icons/867-arrow-pointing-down-inside-a-circle-outline-icon.png" alt="scroll down mark" />
+                </div>
+                <div id="info-section">
+                    <div id="description">
+                        <h1 id="description-title">Vietnam</h1>
+                    </div>
+                    <div id="graphic-description" class="section">
+                        <!-- <img class="map-graphic" src="assets/images/tours/Flag-map_of_Vietnam.png" alt="vietnam 1" usemap="planetmap" /> -->
+                        <svg width="15%">
+                            <image href="assets/images/tours/Flag-map_of_Vietnam.png" x="0" y="0" width="100%" />
+                            <circle class="location-mark mark-1" cx="90" cy="20" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-2" cx="40" cy="25" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-3" cx="70" cy="65" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-4" cx="40" cy="35" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-5" cx="85" cy="50" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-6" cx="126" cy="163" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-7" cx="132" cy="172" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-8" cx="155" cy="220" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-9" cx="100" cy="285" r="4" stroke="white" stroke-width="2" fill="red" />
+                            <circle class="location-mark mark-10" cx="70" cy="305" r="4" stroke="white" stroke-width="2" fill="red" />
+                        </svg>
+                        <div id="country-areas">
+                            <div class="country-area">
+                                <p class="area-name">North</p>
+                                <p class="area-locations">
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('1', true)" onmouseout="showLocationMark('1', false)">Cao Bang</span>, 
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('2', true)" onmouseout="showLocationMark('2', false)">Bac Ha</span>, 
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('3', true)" onmouseout="showLocationMark('3', false)">Mai Chau</span>, 
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('4', true)" onmouseout="showLocationMark('4', false)">Sapa</span>, 
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('5', true)" onmouseout="showLocationMark('5', false)">Hanoi</span>, 
+                                </p>
+                            </div>
+                            <div class="country-area">
+                                <p class="area-name">Center</p>
+                                <p class="area-locations">
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('6', true)" onmouseout="showLocationMark('6', false)">Da Nang</span>, 
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('7', true)" onmouseout="showLocationMark('7', false)">Hoi An</span>, 
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('8', true)" onmouseout="showLocationMark('8', false)">Quy Nhon</span>, 
+                                </p>
+                            </div>
+                            <div class="country-area">
+                                <p class="area-name">South</p>
+                                <p class="area-locations">
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('9', true)" onmouseout="showLocationMark('9', false)">Saigon</span>, 
+                                    <span class="area-location" onclick="window.location.href = 'location.html';" onmouseover="showLocationMark('10', true)" onmouseout="showLocationMark('10', false)">Can Tho</span>, 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 id="country-news-header">Le attrazioni particolari</h2>
+                    <div id="country-news" class="section">
+                        <div class="country-news-wrapper">
+                            <div class="country-news-image" onclick="window.location.href = '#';" style="background-image: url('./assets/images/tours/sapa.jpg');"></div>
+                            <div class="country-news-description">
+                                <h3 class="news-title">
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h3>
+                                <p class="news-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien. Proin quis ipsum dolor. Nunc sed ultrices magna. Phasellus finibus risus ut diam accumsan tincidunt. Curabitur mollis odio erat, dapibus hendrerit enim luctus sed. Sed pharetra auctor elit. Aliquam sed aliquet velit. Aliquam vitae ante vitae tellus pharetra vulputate. Quisque fringilla posuere euismod. Nulla sed quam eu ante pulvinar fermentum a ut justo. Sed ut vulputate orci. Aenean placerat lacus aliquam, pulvinar purus luctus, feugiat magna. Suspendisse at dolor sagittis tellus semper interdum...
+                                    <span class="detail-button" onclick="window.location.href = '#';">Read more</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="country-news-wrapper">
+                            <div class="country-news-image" onclick="window.location.href = '#';" style="background-image: url('./assets/images/tours/sapa.jpg');"></div>
+                            <div class="country-news-description">
+                                <h3 class="news-title">
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h3>
+                                <p class="news-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien. Proin quis ipsum dolor. Nunc sed ultrices magna. Phasellus finibus risus ut diam accumsan tincidunt. Curabitur mollis odio erat, dapibus hendrerit enim luctus sed. Sed pharetra auctor elit. Aliquam sed aliquet velit. Aliquam vitae ante vitae tellus pharetra vulputate. Quisque fringilla posuere euismod. Nulla sed quam eu ante pulvinar fermentum a ut justo. Sed ut vulputate orci. Aenean placerat lacus aliquam, pulvinar purus luctus, feugiat magna. Suspendisse at dolor sagittis tellus semper interdum...
+                                    <span class="detail-button" onclick="window.location.href = '#';">Read more</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="country-news-wrapper">
+                            <div class="country-news-image"  onclick="window.location.href = '#';" style="background-image: url('./assets/images/tours/sapa.jpg');"></div>
+                            <div class="country-news-description">
+                                <h3 class="news-title">
+                                    <a href="#">Lorem ipsum dolor sit amet</a>
+                                </h3>
+                                <p class="news-description">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien. Proin quis ipsum dolor. Nunc sed ultrices magna. Phasellus finibus risus ut diam accumsan tincidunt. Curabitur mollis odio erat, dapibus hendrerit enim luctus sed. Sed pharetra auctor elit. Aliquam sed aliquet velit. Aliquam vitae ante vitae tellus pharetra vulputate. Quisque fringilla posuere euismod. Nulla sed quam eu ante pulvinar fermentum a ut justo. Sed ut vulputate orci. Aenean placerat lacus aliquam, pulvinar purus luctus, feugiat magna. Suspendisse at dolor sagittis tellus semper interdum...
+                                    <span class="detail-button" onclick="window.location.href = '#';">Read more</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container-wrapper">
+				<div class="footer-column">
+					<p class="footer-title">CONTACT</p>
+					<p>Phone: 0123456789</p>
+					<p>Email: abc@def.com</p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">COMPANY</p>
+					<p>About us</p>
+					<p>Blog</p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">TOURS</p>
+					<p>Tour Laos</p>
+					<p>Tour Vietnam</p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="footer-column" id="payment-column">
+					<p class="footer-title">PAYMENT</p>
+					<p>
+						<span>Visa/Master</span>
+						<img class="payment-icon" alt="visa master icon" src="./assets/images/mastercard-icon-png-9.jpg" />
+					</p>
+					<p>
+						<span>AMEX</span>
+						<img class="payment-icon" alt="amex icon" src="./assets/images/american_express-512.png" />
+					</p>
+					<p>
+						<span>JCB</span>
+						<img class="payment-icon" alt="jcb icon" src="./assets/images/jcb-512.png" />
+					</p>
+					<p>
+						<span>Paypal</span>
+						<img class="payment-icon" alt="paypal icon" src="./assets/images/paypal-icon-logo-png-transparent.png" />
+					</p>
+				</div>
+				<div class="footer-column">
+					<div id="footer-logo">LOGO</div>
+					<div id="social-link">
+						<a href="#"><img class="social-icon" alt="facebook icon" src="./assets/images/Facebook-icon-1.png" /></a>
+						<a href="#"><img class="social-icon" alt="youtube icon" src="./assets/images/youtube_PNG14.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact-panel">
+            <div id="quick-access-buttons">
+                <button id="button-question" class="quick-access-button" onclick="window.location.href = 'question.html';">
+                    <i class="far fa-question-circle"></i>
+                </button>
+                <button id="toggle-button-open" class="quick-access-button" onClick="openContactForm()">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="button-open-facebook" class="quick-access-button" onclick="window.open('https://www.facebook.com/roberto.baggio.108', '_blank');">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button id="button-open-youtube" class="quick-access-button" onclick="window.open('https://www.youtube.com/', '_blank');">
+                    <i class="fab fa-youtube"></i>
+                </button>
+            </div>
+			<button id="toggle-button-close" onClick="closeContactForm()">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+	</div>
+
+</body>
+</html>
