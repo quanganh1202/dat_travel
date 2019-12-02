@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Itinerario su misura</title>
+	<title>Richiedi</title>
 	<link rel="stylesheet" href="./build/css/styles.css">
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="./build/js/script.js"></script>
@@ -75,139 +75,12 @@
 		<div id="content" class="info-page-content question-content">
 			<div class="container-wrapper">
                 <div id="background-image-content">
-                    <h1 id="country-name">QUESTION US</h1>
+                    <h1 id="country-name">RICHIEDI</h1>
                 </div>
                 <div id="info-section">
                     <div id="question-form" class="section">
 						<form onsubmit="alert('Questions sent successfully!')">
-							<div class="question-form-section">
-								<div class="section-title"><p>1</p><p>Destinazione:</p></div>
-								<div class="form-input destinazione">
-									<div>
-										<label for="checkbox-VN">
-											<input id="checkbox-VN" name="destinazione" type="checkbox" value="VN" />Vietnam
-										</label>
-									</div>
-								</div>
-								<div class="form-input destinazione">
-									<div>
-										<label for="checkbox-LAOS">
-											<input id="checkbox-LAOS" name="destinazione" type="checkbox" value="LAOS" />Laos
-										</label>
-									</div>
-								</div>
-								<div class="form-input destinazione">
-									<div>
-										<label for="checkbox-CAM">
-											<input id="checkbox-CAM" name="destinazione" type="checkbox" value="CAM" />Cambogia
-										</label>
-									</div>
-								</div>
-								<div class="form-input destinazione">
-									<div>
-										<label for="checkbox-BIR">
-											<input id="checkbox-BIR" name="destinazione" type="checkbox" value="BIR" />Birmania
-										</label>
-									</div>
-								</div>
-							</div>
-							<div class="question-form-section informazioni">
-								<div class="section-title"><p>2</p><p>Informazioni del viaggio:</p></div>
-								<div class="form-input arrive-date">
-									<div>
-										<label for="arrive-date">Data di arrivo</label>
-									</div>
-									<input id="arrive-date" name="arrive-date" type="date" />
-								</div>
-								<div class="form-input departure-date">
-									<div>
-										<label for="departure-date">Data di partenza</label>
-									</div>
-									<input id="departure-date" name="departure-date" type="date" />
-								</div>
-								<div class="form-input client-number">
-									<div>
-										<label for="client-number">No. cliente</label>
-									</div>
-									<input id="client-number" name="client-number" type="number" min="0" />
-								</div>
-								<div class="form-input children-number">
-									<div>
-										<label for="children-number">Bambini</label>
-									</div>
-									<input id="children-number" name="children-number" type="number" min="0" />
-								</div>
-								<div class="form-input room-type">
-									<div>
-										<label for="room-type">Tipo di camera</label>
-									</div>
-									<select name="room-type">
-										<option value="couple">Coppia</option>
-									</select>
-								</div>
-								<div class="form-input room-number">
-									<div>
-										<label for="room-number">No. di camera</label>
-									</div>
-									<input id="room-number" name="room-number" type="number" min="0" />
-								</div>
-								<div class="form-input board">
-									<div>
-										<label for="board">Pensione</label>
-									</div>
-									<select name="board">
-										<option value="pranzo">Pranzo</option>
-									</select>
-								</div>
-								<div class="form-input hotel-rank">
-									<div>
-										<label for="hotel-rank">Hotel</label>
-									</div>
-									<select name="hotel-rank">
-										<option value="5">5</option>
-										<option value="4">4</option>
-										<option value="3">3</option>
-									</select>
-								</div>
-								<div style="clear: both; font-size: 14px; padding: 20px 10px 0;">Quale tua interessa?</div>
-								<div class="form-input interested">
-									<div>
-										<label for="checkbox-museum">
-											<input id="checkbox-museum" name="interested" type="checkbox" value="museum" />Museo
-										</label>
-									</div>
-								</div>
-								<div class="form-input interested">
-									<div>
-										<label for="checkbox-culture">
-											<input id="checkbox-culture" name="interested" type="checkbox" value="culture" />Cultura & arti
-										</label>
-									</div>
-								</div>
-								<div class="form-input interested">
-									<div>
-										<label for="checkbox-mare">
-											<input id="checkbox-mare" name="interested" type="checkbox" value="mare" />Il mare
-										</label>
-									</div>
-								</div>
-								<div class="form-input interested">
-									<div>
-										<label for="checkbox-avventure">
-											<input id="checkbox-avventure" name="interested" type="checkbox" value="avventure" />Avventure
-										</label>
-									</div>
-								</div>
-								<div class="form-input interested">
-									<div>
-										<label for="checkbox-photography">
-											<input id="checkbox-photography" name="interested" type="checkbox" value="photography" />Fotografico
-										</label>
-									</div>
-								</div>
-							</div>
 							<div class="question-form-section personal-info">
-								<div class="section-title"><p>3</p><p>Informazione personale:</p></div>
 								<div class="form-input first-name">
 									<div>
 										<label for="first-name">Nome</label>
@@ -240,8 +113,10 @@
 								</div>
 							</div>
 							<div class="question-form-section special-message">
-								<div class="section-title"><p>4</p><p>Richiesta speciale:</p></div>
 								<div class="form-input message full-length">
+                                    <div>
+                                        <label for="message">Messaggio</label>
+                                    </div>
 									<textarea rows="5" id="message" name="message"></textarea>
 								</div>
 							</div>
