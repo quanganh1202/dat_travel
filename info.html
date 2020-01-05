@@ -2,11 +2,21 @@
 <html>
 <head>
 	<title>Le informazioni</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="./build/css/styles.css">
+	<link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.css">
 	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="./build/js/script.js"></script>
+	<script src="./bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="./bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.js"></script>
     <script type="text/javascript">
-        checkPageScroll()
+		checkPageScroll();
+		$(document).ready(function () {
+            $('#arrive-date').datepicker({});
+			$('#departure-date').datepicker({});
+		})
     </script>
 </head>
 <body>
@@ -42,31 +52,37 @@
                                 </div>
                             </div>
                         </li>
-                        <li>
+                        <li id="tours-parent-item">
                             <span>Stili di viaggio</span>
                             <div class="child-menu image-menu">
-                                <div class="item-image" onclick="window.location.href = 'tours.html';">
-                                    <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-                                    <p><a href="tours.html">Viggi</a></p>
-                                </div>
-                                <div class="item-image" onclick="window.location.href = 'tours.html';">
-                                    <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-                                    <p><a href="tours.html">Cultura & arti</a></p>
-                                </div>
-                                <div class="item-image" onclick="window.location.href = 'tours.html';">
-                                    <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-                                    <p><a href="tours.html">Cos la famiglia</a></p>
-                                </div>
-                                <div class="item-image" onclick="window.location.href = 'tours.html';">
-                                    <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-                                    <p><a href="tours.html">Rilassarsi al mare</a></p>
+                                <div class="child-menu image-menu">
+                                    <div class="item-image" onclick="window.location.href = 'tours.html';">
+                                        <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                        <p><a href="tours.html">Honeymoon</a></p>
+                                    </div>
+                                    <div class="item-image" onclick="window.location.href = 'tours.html';">
+                                        <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                        <p><a href="tours.html">Culture & Art</a></p>
+                                    </div>
+                                    <div class="item-image" onclick="window.location.href = 'tours.html';">
+                                        <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                        <p><a href="tours.html">Beach</a></p>
+                                    </div>
+                                    <div class="item-image" onclick="window.location.href = 'tours.html';">
+                                        <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                        <p><a href="tours.html">Family</a></p>
+                                    </div>
+                                    <div class="item-image" onclick="window.location.href = 'tours.html';">
+                                        <a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+                                        <p><a href="tours.html">Adventure</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </li>
                         <li><span><a href="index.html">Noi siamo</a></span></li>
-                        <li><span><a href="index.html">Contatti</a></span></li>
+                        <li><span><a href="contact.html">Contatti</a></span></li>
                         <li>
-                            <button id="header-menu-btn" onclick="window.location.href = 'question.html';">Itinerario su misura</button>
+                            <button id="header-menu-btn" data-toggle="modal" data-target="#question-modal">Itinerario su misura</button>
                         </li>
                     </ul>
 				</div>
@@ -120,7 +136,7 @@
 			</div>
 		</div>
 		<div id="footer">
-			<div class="container-wrapper">
+            <div class="container-wrapper">
                 <div class="footer-column">
                     <div id="footer-logo">LOGO</div>
                 </div>
@@ -132,18 +148,25 @@
                     <p></p>
                 </div>
                 <div class="footer-column">
+                    <p class="footer-title">PRIMA DI PARTIRE</p>
+                    <p>Siti da non perdere</p>
+                    <p>Le informaizone</p>
+                    <p>Recensione</p>
+                    <p>Blogs</p>
+                </div>
+                <div class="footer-column">
                     <p class="footer-title"><a href="term_condition.html">TERMINI & CONDIZIONI</a></p>
                     <p><a href="term_condition.html">Politica privacy</a></p>
                     <p><a href="term_condition.html">Metodi di pagamento</a></p>
                     <p><a href="term_condition.html">Come prenotare</a></p>
-                    <p></p>
+                    <p><a href="term_condition.html">Nostro servizio</a></p>
                 </div>
                 <div class="footer-column">
                     <p class="footer-title">VIAGGI & MISURA</p>
                     <p>Viaggi Laos</p>
                     <p>Viaggi Vietnam</p>
                     <p>Viaggi Cambogia</p>
-                    <p></p>
+                    <p>Viaggi in Birmania</p>
                 </div>
                 <div class="footer-column" id="payment-column">
                     <p class="footer-title">ACCETTIAMO</p>
@@ -171,10 +194,11 @@
                         <a href="#"><img class="social-icon" alt="youtube icon" src="./assets/images/youtube_PNG14.png" /></a>
                     </div>
                 </div>
-			</div>
-		</div>
+            </div>
+        </div>
 		<div id="contact-panel">
             <div id="quick-access-buttons">
+                <img width="40" src="./assets/images/icons/flag-400.png" />
                 <button id="button-question" class="quick-access-button" onclick="window.location.href = 'question.html';">
                     <i class="far fa-question-circle"></i>
                 </button>
@@ -192,7 +216,250 @@
 				<i class="fas fa-times"></i>
 			</button>
 		</div>
+		<button id="request-btn" data-toggle="modal" data-target="#request-modal"><p>Richiedi</p></button>
+		<div class="modal fade" id="request-modal" tabindex="-1" role="dialog" aria-labelledby="request-modal-label" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="request-modal-label">Richiedi</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="question-form" class="section">
+							<form onsubmit="alert('Questions sent successfully!')">
+								<div class="question-form-section personal-info">
+									<div class="form-input first-name">
+										<div>
+											<label for="first-name">Nome</label>
+										</div>
+										<input id="first-name" name="first-name" type="text" />
+									</div>
+									<div class="form-input last-name">
+										<div>
+											<label for="last-name">Cognome</label>
+										</div>
+										<input id="last-name" name="last-name" type="text" />
+									</div>
+									<div class="form-input national">
+										<div>
+											<label for="national">Nazionalità</label>
+										</div>
+										<input id="national" name="national" type="text" />
+									</div>
+									<div class="form-input email">
+										<div>
+											<label for="email">Email</label>
+										</div>
+										<input id="email" name="email" type="email" />
+									</div>
+									<div class="form-input phone-number">
+										<div>
+											<label for="phone-number">Telefono</label>
+										</div>
+										<input id="phone-number" name="phone-number" type="tel" />
+									</div>
+								</div>
+								<div class="question-form-section special-message">
+									<div class="form-input message full-length">
+										<div>
+											<label for="message">Messaggio</label>
+										</div>
+										<textarea rows="5" id="message" name="message"></textarea>
+									</div>
+								</div>
+								<button id="submit-btn" type="submit">Inviare</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="question-modal" tabindex="-1" role="dialog" aria-labelledby="question-modal-label" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="question-modal-label">Itinerario su misura</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="question-form" class="section">
+							<form onsubmit="alert('Questions sent successfully!')">
+								<div class="question-form-section">
+									<div class="section-title"><p>1</p><p>Destinazione:</p></div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-VN">
+												<input id="checkbox-VN" name="destinazione" type="checkbox" value="VN" />Vietnam
+											</label>
+										</div>
+									</div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-LAOS">
+												<input id="checkbox-LAOS" name="destinazione" type="checkbox" value="LAOS" />Laos
+											</label>
+										</div>
+									</div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-CAM">
+												<input id="checkbox-CAM" name="destinazione" type="checkbox" value="CAM" />Cambogia
+											</label>
+										</div>
+									</div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-BIR">
+												<input id="checkbox-BIR" name="destinazione" type="checkbox" value="BIR" />Birmania
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="question-form-section informazioni">
+									<div class="section-title"><p>2</p><p>Informazioni del viaggio:</p></div>
+									<div class="form-input arrive-date">
+										<div>
+											<label for="arrive-date">Data di arrivo</label>
+										</div>
+										<input id="arrive-date" name="arrive-date" type="text" />
+									</div>
+									<div class="form-input departure-date">
+										<div>
+											<label for="departure-date">Data di partenza</label>
+										</div>
+										<input id="departure-date" name="departure-date" type="text" />
+									</div>
+									<div class="form-input client-number">
+										<div>
+											<label for="client-number">No. cliente</label>
+										</div>
+										<input id="client-number" name="client-number" type="number" min="0" />
+									</div>
+									<div class="form-input children-number">
+										<div>
+											<label for="children-number">Bambini</label>
+										</div>
+										<input id="children-number" name="children-number" type="number" min="0" />
+									</div>
+									<div class="form-input room-type">
+										<div>
+											<label for="room-type">Tipo di camera</label>
+										</div>
+										<select name="room-type">
+											<option value="couple">Coppia</option>
+										</select>
+									</div>
+									<div class="form-input room-number">
+										<div>
+											<label for="room-number">No. di camera</label>
+										</div>
+										<input id="room-number" name="room-number" type="number" min="0" />
+									</div>
+									<div class="form-input board">
+										<div>
+											<label for="board">Pensione</label>
+										</div>
+										<select name="board">
+											<option value="pranzo">Pranzo</option>
+										</select>
+									</div>
+									<div class="form-input hotel-rank">
+										<div>
+											<label for="hotel-rank">Hotel</label>
+										</div>
+										<select name="hotel-rank">
+											<option value="5">5</option>
+											<option value="4">4</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div style="clear: both; font-size: 14px; padding: 20px 10px 0;">Quale tua interessa?</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-museum">
+												<input id="checkbox-museum" name="interested" type="checkbox" value="museum" />Museo
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-culture">
+												<input id="checkbox-culture" name="interested" type="checkbox" value="culture" />Cultura & arti
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-mare">
+												<input id="checkbox-mare" name="interested" type="checkbox" value="mare" />Il mare
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-avventure">
+												<input id="checkbox-avventure" name="interested" type="checkbox" value="avventure" />Avventure
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-photography">
+												<input id="checkbox-photography" name="interested" type="checkbox" value="photography" />Fotografico
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="question-form-section personal-info">
+									<div class="section-title"><p>3</p><p>Informazione personale:</p></div>
+									<div class="form-input first-name">
+										<div>
+											<label for="first-name">Nome</label>
+										</div>
+										<input id="first-name" name="first-name" type="text" />
+									</div>
+									<div class="form-input last-name">
+										<div>
+											<label for="last-name">Cognome</label>
+										</div>
+										<input id="last-name" name="last-name" type="text" />
+									</div>
+									<div class="form-input national">
+										<div>
+											<label for="national">Nazionalità</label>
+										</div>
+										<input id="national" name="national" type="text" />
+									</div>
+									<div class="form-input email">
+										<div>
+											<label for="email">Email</label>
+										</div>
+										<input id="email" name="email" type="email" />
+									</div>
+									<div class="form-input phone-number">
+										<div>
+											<label for="phone-number">Telefono</label>
+										</div>
+										<input id="phone-number" name="phone-number" type="tel" />
+									</div>
+								</div>
+								<div class="question-form-section special-message">
+									<div class="section-title"><p>4</p><p>Richiesta speciale:</p></div>
+									<div class="form-input message full-length">
+										<textarea rows="5" id="message" name="message"></textarea>
+									</div>
+								</div>
+								<button id="submit-btn" class="btn" type="submit">Inviare</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
 </body>
 </html>

@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paradiso per due</title>
+	<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="./build/css/styles.css">
+	<link rel="stylesheet" href="./bootstrap-4.4.1-dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="./bootstrap-datepicker-1.9.0-dist/css/bootstrap-datepicker3.css">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="./build/js/script.js"></script>
+	<script src="./bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+	<script src="./bootstrap-datepicker-1.9.0-dist/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript">
+		checkPageScroll();
+		$(document).ready(function () {
+			$('#booking-departure-date').datepicker({});
+			$('#arrive-date').datepicker({});
+			$('#departure-date').datepicker({});
+		})
+    </script>
+</head>
+<body>
+	<div id="app">
+		<div id="background-video">
+            <div id="overlay-background"></div>
+			<div id="background-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg');"></div>
+		</div>
+		<div id="header">
+			<div class="container-wrapper">
+				<div id="header-logo">LOGO</div>
+				<div id="header-menu">
+					<ul>
+						<li><span><a href="index.html">Home</a></span></li>
+						<li>
+							<span>Destinazioni</span>
+							<div class="child-menu image-menu">
+								<div class="item-image" onclick="window.location.href = 'destination.html';">
+									<a href="destination.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+									<p><a href="destination.html">Vietnam</a></p>
+								</div>
+								<div class="item-image" onclick="window.location.href = 'destination.html';">
+									<a href="destination.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+									<p><a href="#">Laos</a></p>
+								</div>
+								<div class="item-image" onclick="window.location.href = 'destination.html';">
+									<a href="destination.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+									<p><a href="#">Cambogia</a></p>
+								</div>
+								<div class="item-image" onclick="window.location.href = 'destination.html';">
+									<a href="destination.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+									<p><a href="destination.html">Birmania</a></p>
+								</div>
+							</div>
+						</li>
+						<li id="tours-parent-item">
+							<span>Stili di viaggio</span>
+							<div class="child-menu image-menu">
+								<div class="child-menu image-menu">
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Honeymoon</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Culture & Art</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Beach</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Family</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Adventure</a></p>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li><span><a href="index.html">Noi siamo</a></span></li>
+						<li><span><a href="index.html">Contatti</a></span></li>
+						<li>
+							<button id="header-menu-btn" data-toggle="modal" data-target="#question-modal">Itinerario su misura</button>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="content" class="info-page-content tour-detail-page">
+			<div class="container-wrapper">
+                <div id="background-image-content" class="with-border">
+                    <h1 id="country-name">Paradiso per due</h1>
+                    <img src="assets/images/icons/867-arrow-pointing-down-inside-a-circle-outline-icon.png" alt="scroll down mark" />
+                </div>
+                <div id="info-section">
+					<div class="container">
+						<div class="row">
+							<div class="col-sm-3">
+								<div id="form-wrapper">
+									<div id="form-header">
+										<p>Book this tour</p>
+									</div>
+									<form id="booking-form">
+										<div class="form-group">
+											<label for="name">Name</label>
+											<input type="text" class="form-control form-control-sm" id="name" placeholder="">
+										</div>
+										<div class="form-group">
+											<label for="nationality">Nationality</label>
+											<input type="text" class="form-control form-control-sm" id="nationality" placeholder="">
+										</div>
+										<div class="form-group">
+											<label for="email">Email</label>
+											<input type="email" class="form-control form-control-sm" id="email" placeholder="">
+										</div>
+										<div class="form-group">
+											<label for="phone">Phone</label>
+											<input type="text" class="form-control form-control-sm" id="phone" placeholder="">
+										</div>
+										<div class="form-group">
+											<label for="booking-departure-date">Date of departure</label>
+											<input type="text" class="form-control form-control-sm" id="booking-departure-date" placeholder="">
+										</div>
+										<div class="form-group">
+											<label for="client-number">Number of cliens</label>
+											<input type="number" class="form-control form-control-sm" id="client-number" placeholder="">
+										</div>
+										<div class="button-wrapper">
+											<button type="submit" class="btn mb-2 main-color-bg">Submit</button>
+										</div>
+									</form>
+								</div>
+							</div>
+							<div class="col-sm-9">
+								<div id="description">
+									<h1 id="description-title">PARADISO PER DUE</h1>
+									<h3 id="description-schedule">10 giorni / 9 notti</h3>
+									<h3 id="description-places">Hanoi - Halong - Hue - Hoi An - Ho Chi Minh - Phu Quoc</h3>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien. Proin quis ipsum dolor. Nunc sed ultrices magna. Phasellus finibus risus ut diam accumsan tincidunt. Curabitur mollis odio erat, dapibus hendrerit enim luctus sed. Sed pharetra auctor elit. Aliquam sed aliquet velit. Aliquam vitae ante vitae tellus pharetra vulputate. Quisque fringilla posuere euismod. Nulla sed quam eu ante pulvinar fermentum a ut justo. Sed ut vulputate orci. Aenean placerat lacus aliquam, pulvinar purus luctus, feugiat magna. Suspendisse at dolor sagittis tellus semper interdum</p>
+								</div>
+								<div id="graphic-description" class="section">
+									<img class="map-graphic" src="assets/images/tour-detail-map.png" alt="vietnam 1" />
+									<div class="info-description">
+										<p id="detailed-title">Itinerario dettagliato</p>
+										<ul id="schedule-detailed">
+											<li onclick="viewDayDetail(1)" data-toggle="modal" data-target="#schedule-detailed-modal">Giorno 1 : Arrivo ad Hanoi</li>
+											<li onclick="viewDayDetail(2)" data-toggle="modal" data-target="#schedule-detailed-modal">Giorno 2 : Visita’ di Hanoi</li>
+											<li onclick="viewDayDetail(3)" data-toggle="modal" data-target="#schedule-detailed-modal">Giorno 3 : Hanoi – baia di Halong</li>
+											<li onclick="viewDayDetail(4)" data-toggle="modal" data-target="#schedule-detailed-modal">Giorno 4 : Halong – Hanoi – Volo per Hoi An</li>
+											<li onclick="viewDayDetail(5)" data-toggle="modal" data-target="#schedule-detailed-modal">Giorno 5 : Visita di Hoi An</li>
+										</ul>
+										<div class="modal fade" id="schedule-detailed-modal" tabindex="-1" role="dialog" aria-labelledby="schedule-detailed-label" aria-hidden="true">
+											<div class="modal-dialog modal-lg" role="document">
+												<div class="modal-content">
+													<div class="modal-header">
+														<h5 class="modal-title" id="schedule-detailed-label">Giorno 1 : Arrivo ad Hanoi</h5>
+														<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+														<span aria-hidden="true">&times;</span>
+														</button>
+													</div>
+													<div class="modal-body">
+														<i onclick="goToDayDetailByOneStep('prev')" id="day-control-left" class="fas fa-angle-left day-control day-control-left"></i>
+														Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien. Proin quis ipsum dolor. Nunc sed ultrices magna. Phasellus finibus risus ut diam accumsan tincidunt. Curabitur mollis odio erat, dapibus hendrerit enim luctus sed. Sed pharetra auctor elit. Aliquam sed aliquet velit. Aliquam vitae ante vitae tellus pharetra vulputate. Quisque fringilla posuere euismod. Nulla sed quam eu ante pulvinar fermentum a ut justo. Sed ut vulputate orci. Aenean placerat lacus aliquam, pulvinar purus luctus, feugiat magna. Suspendisse at dolor sagittis tellus semper interdum
+														<i onclick="goToDayDetailByOneStep('next')" id="day-control-right" class="fas fa-angle-right day-control day-control-right"></i>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div id="tour-details">
+									<div class="tour-details-column">
+										<p class="tour-details-column-title">Includes</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien. Proin quis ipsum dolor. Nunc sed ultrices magna. Phasellus finibus risus ut diam accumsan tincidunt. Curabitur mollis odio erat, dapibus hendrerit enim luctus sed. Sed pharetra auctor elit. Aliquam sed aliquet velit. Aliquam vitae ante vitae tellus pharetra vulputate. Quisque fringilla posuere euismod. Nulla sed quam eu ante pulvinar fermentum a ut justo. Sed ut vulputate orci. Aenean placerat lacus aliquam, pulvinar purus luctus, feugiat magna. Suspendisse at dolor sagittis tellus semper interdum</p>
+									</div>
+									<div class="tour-details-column">
+										<p class="tour-details-column-title">Excludes</p>
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien. Proin quis ipsum dolor. Nunc sed ultrices magna. Phasellus finibus risus ut diam accumsan tincidunt. Curabitur mollis odio erat, dapibus hendrerit enim luctus sed. Sed pharetra auctor elit. Aliquam sed aliquet velit. Aliquam vitae ante vitae tellus pharetra vulputate. Quisque fringilla posuere euismod. Nulla sed quam eu ante pulvinar fermentum a ut justo. Sed ut vulputate orci. Aenean placerat lacus aliquam, pulvinar purus luctus, feugiat magna. Suspendisse at dolor sagittis tellus semper interdum</p>
+									</div>
+								</div>
+								<div id="tours" class="section">
+									<div id="tours-slider" class="carousel slide" data-ride="carousel" data-interval="3000">
+										<ol class="carousel-indicators">
+											<li data-target="#tours-slider" data-slide-to="0" class="active"></li>
+											<li data-target="#tours-slider" data-slide-to="1"></li>
+										</ol>
+										<div class="carousel-inner">
+											<div class="carousel-item active">
+												<div class="tour-selection">
+													<div class="tour-selection-content">
+														<div class="tour-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg')"></div>
+														<div class="tour-info">
+															<h2>Tour 1</h2>
+															<p>1 day</p>
+															<p>Tour 1 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien.</p>
+															<button onclick="window.location.href = 'tour-detail.html';">VIEW DETAILS</button>
+														</div>
+													</div>
+												</div>
+												<div class="tour-selection">
+													<div class="tour-selection-content">
+														<div class="tour-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg')"></div>
+														<div class="tour-info">
+															<h2>Tour 2</h2>
+															<p>1 day</p>
+															<p>Tour 2 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien.</p>
+															<button onclick="window.location.href = 'tour-detail.html';">VIEW DETAILS</button>
+														</div>
+													</div>
+												</div>
+												<div class="tour-selection">
+													<div class="tour-selection-content">
+														<div class="tour-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg')"></div>
+														<div class="tour-info">
+															<h2>Tour 3</h2>
+															<p>4 days/ 3 nights</p>
+															<p>Tour 3 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien.</p>
+															<button onclick="window.location.href = 'tour-detail.html';">VIEW DETAILS</button>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="carousel-item">
+												<div class="tour-selection">
+													<div class="tour-selection-content">
+														<div class="tour-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg')"></div>
+														<div class="tour-info">
+															<h2>Tour 4</h2>
+															<p>1 day</p>
+															<p>Tour 4 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien.</p>
+															<button onclick="window.location.href = 'tour-detail.html';">VIEW DETAILS</button>
+														</div>
+													</div>
+												</div>
+												<div class="tour-selection">
+													<div class="tour-selection-content">
+														<div class="tour-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg')"></div>
+														<div class="tour-info">
+															<h2>Tour 5</h2>
+															<p>1 day</p>
+															<p>Tour 5 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien.</p>
+															<button onclick="window.location.href = 'tour-detail.html';">VIEW DETAILS</button>
+														</div>
+													</div>
+												</div>
+												<div class="tour-selection">
+													<div class="tour-selection-content">
+														<div class="tour-image" style="background-image: url('./assets/images/tours/HalongBay-aa0f7e71a1db.jpg')"></div>
+														<div class="tour-info">
+															<h2>Tour 6</h2>
+															<p>4 days/ 3 nights</p>
+															<p>Tour 6 description. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut at porttitor sapien.</p>
+															<button onclick="window.location.href = 'tour-detail.html';">VIEW DETAILS</button>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<a class="carousel-control-prev" href="#tours-slider" role="button" data-slide="prev">
+											<span class="carousel-control-prev-icon fab fa-youtube" aria-hidden="true"></span>
+											<span class="sr-only">Previous</span>
+										</a>
+										<a class="carousel-control-next" href="#tours-slider" role="button" data-slide="next">
+											<span class="carousel-control-next-icon" aria-hidden="true"></span>
+											<span class="sr-only">Next</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+                </div>
+			</div>
+		</div>
+		<div id="footer">
+			<div class="container-wrapper">
+				<div class="footer-column">
+					<div id="footer-logo">LOGO</div>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">CONTATTI</p>
+					<p>Phone: 0123456789</p>
+					<p>Email: abc@def.com</p>
+					<p></p>
+					<p></p>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title"><a href="term_condition.html">TERMINI & CONDIZIONI</a></p>
+					<p><a href="term_condition.html">Politica privacy</a></p>
+					<p><a href="term_condition.html">Metodi di pagamento</a></p>
+					<p><a href="term_condition.html">Come prenotare</a></p>
+					<p></p>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">VIAGGI & MISURA</p>
+					<p>Viaggi Laos</p>
+					<p>Viaggi Vietnam</p>
+					<p>Viaggi Cambogia</p>
+					<p></p>
+				</div>
+				<div class="footer-column" id="payment-column">
+					<p class="footer-title">ACCETTIAMO</p>
+					<p>
+						<span>Visa/Master</span>
+						<img class="payment-icon" alt="visa master icon" src="./assets/images/mastercard-icon-png-9.jpg" />
+					</p>
+					<p>
+						<span>AMEX</span>
+						<img class="payment-icon" alt="amex icon" src="./assets/images/american_express-512.png" />
+					</p>
+					<p>
+						<span>JCB</span>
+						<img class="payment-icon" alt="jcb icon" src="./assets/images/jcb-512.png" />
+					</p>
+					<p>
+						<span>Paypal</span>
+						<img class="payment-icon" alt="paypal icon" src="./assets/images/paypal-icon-logo-png-transparent.png" />
+					</p>
+				</div>
+				<div class="footer-column">
+					<p class="footer-title">CI SEGUISTE</p>
+					<div id="social-link">
+						<a href="#"><img class="social-icon" alt="facebook icon" src="./assets/images/Facebook-icon-1.png" /></a>
+						<a href="#"><img class="social-icon" alt="youtube icon" src="./assets/images/youtube_PNG14.png" /></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="contact-panel">
+            <div id="quick-access-buttons">
+				<img width="40" src="./assets/images/icons/flag-400.png" />
+                <button id="button-question" class="quick-access-button" onclick="window.location.href = 'question.html';">
+                    <i class="far fa-question-circle"></i>
+                </button>
+                <button id="toggle-button-open" class="quick-access-button" onClick="openContactForm()">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button id="button-open-facebook" class="quick-access-button" onclick="window.open('https://www.facebook.com/roberto.baggio.108', '_blank');">
+                    <i class="fab fa-facebook-f"></i>
+                </button>
+                <button id="button-open-youtube" class="quick-access-button" onclick="window.open('https://www.youtube.com/', '_blank');">
+                    <i class="fab fa-youtube"></i>
+                </button>
+            </div>
+			<button id="toggle-button-close" onClick="closeContactForm()">
+				<i class="fas fa-times"></i>
+			</button>
+		</div>
+		<button id="request-btn" data-toggle="modal" data-target="#request-modal"><p>Richiedi</p></button>
+		<div class="modal fade" id="request-modal" tabindex="-1" role="dialog" aria-labelledby="request-modal-label" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="request-modal-label">Richiedi</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="question-form" class="section">
+							<form onsubmit="alert('Questions sent successfully!')">
+								<div class="question-form-section personal-info">
+									<div class="form-input first-name">
+										<div>
+											<label for="first-name">Nome</label>
+										</div>
+										<input id="first-name" name="first-name" type="text" />
+									</div>
+									<div class="form-input last-name">
+										<div>
+											<label for="last-name">Cognome</label>
+										</div>
+										<input id="last-name" name="last-name" type="text" />
+									</div>
+									<div class="form-input national">
+										<div>
+											<label for="national">Nazionalità</label>
+										</div>
+										<input id="national" name="national" type="text" />
+									</div>
+									<div class="form-input email">
+										<div>
+											<label for="email">Email</label>
+										</div>
+										<input id="email" name="email" type="email" />
+									</div>
+									<div class="form-input phone-number">
+										<div>
+											<label for="phone-number">Telefono</label>
+										</div>
+										<input id="phone-number" name="phone-number" type="tel" />
+									</div>
+								</div>
+								<div class="question-form-section special-message">
+									<div class="form-input message full-length">
+										<div>
+											<label for="message">Messaggio</label>
+										</div>
+										<textarea rows="5" id="message" name="message"></textarea>
+									</div>
+								</div>
+								<button id="submit-btn" type="submit">Inviare</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade" id="question-modal" tabindex="-1" role="dialog" aria-labelledby="question-modal-label" aria-hidden="true">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="question-modal-label">Itinerario su misura</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="question-form" class="section">
+							<form onsubmit="alert('Questions sent successfully!')">
+								<div class="question-form-section">
+									<div class="section-title"><p>1</p><p>Destinazione:</p></div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-VN">
+												<input id="checkbox-VN" name="destinazione" type="checkbox" value="VN" />Vietnam
+											</label>
+										</div>
+									</div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-LAOS">
+												<input id="checkbox-LAOS" name="destinazione" type="checkbox" value="LAOS" />Laos
+											</label>
+										</div>
+									</div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-CAM">
+												<input id="checkbox-CAM" name="destinazione" type="checkbox" value="CAM" />Cambogia
+											</label>
+										</div>
+									</div>
+									<div class="form-input destinazione">
+										<div>
+											<label for="checkbox-BIR">
+												<input id="checkbox-BIR" name="destinazione" type="checkbox" value="BIR" />Birmania
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="question-form-section informazioni">
+									<div class="section-title"><p>2</p><p>Informazioni del viaggio:</p></div>
+									<div class="form-input arrive-date">
+										<div>
+											<label for="arrive-date">Data di arrivo</label>
+										</div>
+										<input id="arrive-date" name="arrive-date" type="text" />
+									</div>
+									<div class="form-input departure-date">
+										<div>
+											<label for="departure-date">Data di partenza</label>
+										</div>
+										<input id="departure-date" name="departure-date" type="text" />
+									</div>
+									<div class="form-input client-number">
+										<div>
+											<label for="client-number">No. cliente</label>
+										</div>
+										<input id="client-number" name="client-number" type="number" min="0" />
+									</div>
+									<div class="form-input children-number">
+										<div>
+											<label for="children-number">Bambini</label>
+										</div>
+										<input id="children-number" name="children-number" type="number" min="0" />
+									</div>
+									<div class="form-input room-type">
+										<div>
+											<label for="room-type">Tipo di camera</label>
+										</div>
+										<select name="room-type">
+											<option value="couple">Coppia</option>
+										</select>
+									</div>
+									<div class="form-input room-number">
+										<div>
+											<label for="room-number">No. di camera</label>
+										</div>
+										<input id="room-number" name="room-number" type="number" min="0" />
+									</div>
+									<div class="form-input board">
+										<div>
+											<label for="board">Pensione</label>
+										</div>
+										<select name="board">
+											<option value="pranzo">Pranzo</option>
+										</select>
+									</div>
+									<div class="form-input hotel-rank">
+										<div>
+											<label for="hotel-rank">Hotel</label>
+										</div>
+										<select name="hotel-rank">
+											<option value="5">5</option>
+											<option value="4">4</option>
+											<option value="3">3</option>
+										</select>
+									</div>
+									<div style="clear: both; font-size: 14px; padding: 20px 10px 0;">Quale tua interessa?</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-museum">
+												<input id="checkbox-museum" name="interested" type="checkbox" value="museum" />Museo
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-culture">
+												<input id="checkbox-culture" name="interested" type="checkbox" value="culture" />Cultura & arti
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-mare">
+												<input id="checkbox-mare" name="interested" type="checkbox" value="mare" />Il mare
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-avventure">
+												<input id="checkbox-avventure" name="interested" type="checkbox" value="avventure" />Avventure
+											</label>
+										</div>
+									</div>
+									<div class="form-input interested">
+										<div>
+											<label for="checkbox-photography">
+												<input id="checkbox-photography" name="interested" type="checkbox" value="photography" />Fotografico
+											</label>
+										</div>
+									</div>
+								</div>
+								<div class="question-form-section personal-info">
+									<div class="section-title"><p>3</p><p>Informazione personale:</p></div>
+									<div class="form-input first-name">
+										<div>
+											<label for="first-name">Nome</label>
+										</div>
+										<input id="first-name" name="first-name" type="text" />
+									</div>
+									<div class="form-input last-name">
+										<div>
+											<label for="last-name">Cognome</label>
+										</div>
+										<input id="last-name" name="last-name" type="text" />
+									</div>
+									<div class="form-input national">
+										<div>
+											<label for="national">Nazionalità</label>
+										</div>
+										<input id="national" name="national" type="text" />
+									</div>
+									<div class="form-input email">
+										<div>
+											<label for="email">Email</label>
+										</div>
+										<input id="email" name="email" type="email" />
+									</div>
+									<div class="form-input phone-number">
+										<div>
+											<label for="phone-number">Telefono</label>
+										</div>
+										<input id="phone-number" name="phone-number" type="tel" />
+									</div>
+								</div>
+								<div class="question-form-section special-message">
+									<div class="section-title"><p>4</p><p>Richiesta speciale:</p></div>
+									<div class="form-input message full-length">
+										<textarea rows="5" id="message" name="message"></textarea>
+									</div>
+								</div>
+								<button id="submit-btn" class="btn" type="submit">Inviare</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

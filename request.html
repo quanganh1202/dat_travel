@@ -42,31 +42,37 @@
 								</div>
 							</div>
 						</li>
-						<li>
+						<li id="tours-parent-item">
 							<span>Stili di viaggio</span>
 							<div class="child-menu image-menu">
-								<div class="item-image" onclick="window.location.href = 'tours.html';">
-									<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-									<p><a href="tours.html">Viggi</a></p>
-								</div>
-								<div class="item-image" onclick="window.location.href = 'tours.html';">
-									<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-									<p><a href="tours.html">Cultura & arti</a></p>
-								</div>
-								<div class="item-image" onclick="window.location.href = 'tours.html';">
-									<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-									<p><a href="tours.html">Cos la famiglia</a></p>
-								</div>
-								<div class="item-image" onclick="window.location.href = 'tours.html';">
-									<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
-									<p><a href="tours.html">Rilassarsi al mare</a></p>
+								<div class="child-menu image-menu">
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Honeymoon</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Culture & Art</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Beach</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Family</a></p>
+									</div>
+									<div class="item-image" onclick="window.location.href = 'tours.html';">
+										<a href="tours.html"><img src="./assets/images/img-vietnam-tours.jpg" /></a>
+										<p><a href="tours.html">Adventure</a></p>
+									</div>
 								</div>
 							</div>
 						</li>
 						<li><span><a href="index.html">Noi siamo</a></span></li>
-						<li><span><a href="index.html">Contatti</a></span></li>
+						<li><span><a href="contact.html">Contatti</a></span></li>
 						<li>
-							<button id="header-menu-btn" onclick="window.location.href = 'question.html';">Itinerario su misura</button>
+							<button id="header-menu-btn" data-toggle="modal" data-target="#question-modal">Itinerario su misura</button>
 						</li>
 					</ul>
 				</div>
@@ -139,18 +145,25 @@
 					<p></p>
 				</div>
 				<div class="footer-column">
+					<p class="footer-title">PRIMA DI PARTIRE</p>
+					<p>Siti da non perdere</p>
+					<p>Le informaizone</p>
+					<p>Recensione</p>
+					<p>Blogs</p>
+				</div>
+				<div class="footer-column">
 					<p class="footer-title"><a href="term_condition.html">TERMINI & CONDIZIONI</a></p>
 					<p><a href="term_condition.html">Politica privacy</a></p>
 					<p><a href="term_condition.html">Metodi di pagamento</a></p>
 					<p><a href="term_condition.html">Come prenotare</a></p>
-					<p></p>
+					<p><a href="term_condition.html">Nostro servizio</a></p>
 				</div>
 				<div class="footer-column">
 					<p class="footer-title">VIAGGI & MISURA</p>
 					<p>Viaggi Laos</p>
 					<p>Viaggi Vietnam</p>
 					<p>Viaggi Cambogia</p>
-					<p></p>
+					<p>Viaggi in Birmania</p>
 				</div>
 				<div class="footer-column" id="payment-column">
 					<p class="footer-title">ACCETTIAMO</p>
@@ -182,6 +195,7 @@
 		</div>
 		<div id="contact-panel">
             <div id="quick-access-buttons">
+				<img width="40" src="./assets/images/icons/flag-400.png" />
                 <button id="button-question" class="quick-access-button" onclick="window.location.href = 'question.html';">
                     <i class="far fa-question-circle"></i>
                 </button>
@@ -199,7 +213,66 @@
 				<i class="fas fa-times"></i>
 			</button>
 		</div>
+		<button id="request-btn" data-toggle="modal" data-target="#request-modal"><p>Richiedi</p></button>
+		<div class="modal fade" id="request-modal" tabindex="-1" role="dialog" aria-labelledby="request-modal-label" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="request-modal-label">Richiedi</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div id="question-form" class="section">
+							<form onsubmit="alert('Questions sent successfully!')">
+								<div class="question-form-section personal-info">
+									<div class="form-input first-name">
+										<div>
+											<label for="first-name">Nome</label>
+										</div>
+										<input id="first-name" name="first-name" type="text" />
+									</div>
+									<div class="form-input last-name">
+										<div>
+											<label for="last-name">Cognome</label>
+										</div>
+										<input id="last-name" name="last-name" type="text" />
+									</div>
+									<div class="form-input national">
+										<div>
+											<label for="national">Nazionalità</label>
+										</div>
+										<input id="national" name="national" type="text" />
+									</div>
+									<div class="form-input email">
+										<div>
+											<label for="email">Email</label>
+										</div>
+										<input id="email" name="email" type="email" />
+									</div>
+									<div class="form-input phone-number">
+										<div>
+											<label for="phone-number">Telefono</label>
+										</div>
+										<input id="phone-number" name="phone-number" type="tel" />
+									</div>
+								</div>
+								<div class="question-form-section special-message">
+									<div class="form-input message full-length">
+										<div>
+											<label for="message">Messaggio</label>
+										</div>
+										<textarea rows="5" id="message" name="message"></textarea>
+									</div>
+								</div>
+								<button id="submit-btn" type="submit">Inviare</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-
 </body>
 </html>
